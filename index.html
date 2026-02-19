@@ -655,6 +655,291 @@
             transition: all 0.3s ease;
         }
 
+        
+        /* Publications Section */
+        #publications {
+            background: var(--slate-dark);
+            margin: 0;
+            max-width: 100%;
+            padding: 8rem 3rem;
+        }
+
+        #publications .pub-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pub-card {
+            margin-top: 4rem;
+            background: var(--black);
+            border: 1px solid rgba(196, 160, 83, 0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 5px 1fr;
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .pub-card:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            transform: translateY(-4px);
+        }
+
+        .pub-accent-bar {
+            background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dark) 100%);
+        }
+
+        .pub-body {
+            padding: 3.5rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .pub-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(196, 160, 83, 0.08);
+            border: 1px solid rgba(196, 160, 83, 0.25);
+            padding: 0.35rem 1rem;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-badge i {
+            font-size: 0.8rem;
+        }
+
+        .pub-title {
+            font-family: var(--serif);
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-author {
+            font-size: 0.9rem;
+            color: var(--gold-light);
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+        }
+
+        .pub-description {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--off-white);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+        }
+
+        .pub-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: var(--slate-dark);
+            border-left: 3px solid var(--gold);
+        }
+
+        .pub-meta-item {
+            text-align: center;
+        }
+
+        .pub-meta-value {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            display: block;
+        }
+
+        .pub-meta-label {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--slate-light);
+            margin-top: 0.4rem;
+            display: block;
+        }
+
+        .pub-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pub-tag {
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
+            color: var(--off-white);
+            background: var(--slate);
+            padding: 0.3rem 0.9rem;
+            border-radius: 2px;
+            font-weight: 300;
+        }
+
+        .pub-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            border: 2px solid var(--gold);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pub-btn-primary {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .pub-btn-primary:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(196, 160, 83, 0.35);
+        }
+
+        .pub-btn-secondary {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .pub-btn-secondary:hover {
+            background: rgba(196, 160, 83, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .pub-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1.5rem;
+            min-width: 180px;
+        }
+
+        .pub-year-badge {
+            font-family: var(--serif);
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: rgba(196, 160, 83, 0.08);
+            line-height: 1;
+            letter-spacing: -2px;
+            text-align: right;
+            user-select: none;
+        }
+
+        .pub-venue-block {
+            text-align: right;
+        }
+
+        .pub-venue-name {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1.3;
+        }
+
+        .pub-venue-sub {
+            font-size: 0.8rem;
+            color: var(--slate-light);
+            margin-top: 0.25rem;
+        }
+
+        .pub-case-number {
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--slate-light);
+            text-align: right;
+        }
+
+        @media (max-width: 968px) {
+            #publications {
+                padding: 5rem 2rem;
+            }
+
+            .pub-body {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 2rem;
+                gap: 2rem;
+            }
+
+            .pub-meta-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pub-side {
+                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .pub-year-badge {
+                font-size: 3rem;
+            }
+
+            .pub-venue-block, .pub-case-number {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .pub-meta-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pub-cta-group {
+                flex-direction: column;
+            }
+
+            .pub-btn {
+                justify-content: center;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+        }
+
         /* Responsive Design */
         @media (max-width: 968px) {
             .nav-container {
@@ -898,6 +1183,79 @@
                     <p>
                         Equipping educators with knowledge and tools to integrate AI in practice safely, delivering personalised learning while protecting student privacy.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="pub-inner">
+            <div class="section-header">
+                <div class="section-label">Research & Recognition</div>
+                <h2 class="section-title">Publications</h2>
+                <p class="section-description">
+                    Peer-reviewed research and case studies advancing responsible AI in education and social impact
+                </p>
+            </div>
+
+            <div class="pub-card">
+                <div class="pub-accent-bar"></div>
+                <div class="pub-body">
+                    <div class="pub-main">
+                        <div class="pub-badge">
+                            <i class="fas fa-award"></i>
+                            Featured Publication
+                        </div>
+                        <h3 class="pub-title">Indra AI: AI-Powered Teaching Assistant for Content Creation and Multilingual Localization</h3>
+                        <p class="pub-author">Shivam Sharma &nbsp;·&nbsp; India AI Summit 2026 &nbsp;·&nbsp; Case Study 17</p>
+
+                        <p class="pub-description">
+                            This case study presents Indra AI's generative-AI teaching assistant, designed to reduce teacher workload while expanding access to high-quality multilingual learning materials across India's K–12 classrooms. Integrated with open-source platforms, the system produces curriculum-aligned lesson plans, worksheets, quizzes, and stories in multiple Indian languages enabling activity-based learning at scale while preserving public-sector governance and data sovereignty.
+                        </p>
+
+                        <div class="pub-meta-grid">
+                            <div class="pub-meta-item">
+                                <span class="pub-meta-value">30–40%</span>
+                                <span class="pub-meta-label">Reduction in teacher workload</span>
+                            </div>
+                            <div class="pub-meta-item">
+                                <span class="pub-meta-value">2×</span>
+                                <span class="pub-meta-label">Student engagement vs. rote methods</span>
+                            </div>
+                            <div class="pub-meta-item">
+                                <span class="pub-meta-value">K–12</span>
+                                <span class="pub-meta-label">Education level, multi-language</span>
+                            </div>
+                        </div>
+
+                        <div class="pub-tags">
+                            <span class="pub-tag">Generative AI</span>
+                            <span class="pub-tag">K–12 Education</span>
+                            <span class="pub-tag">Multilingual Localization</span>
+                            <span class="pub-tag">Responsible AI</span>
+                            <span class="pub-tag">Social Impact</span>
+                            <span class="pub-tag">India</span>
+                        </div>
+
+                        <div class="pub-cta-group">
+                            <a href="Indra_AI_-_AI_Powered_Teaching_Assistant.pdf" target="_blank" class="pub-btn pub-btn-primary">
+                                <i class="fas fa-file-pdf"></i> Read Case Study
+                            </a>
+                            <a href="#cta" class="pub-btn pub-btn-secondary">
+                                <i class="fas fa-envelope"></i> Get in Touch
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pub-side">
+                        <div class="pub-year-badge">2026</div>
+                        <div class="pub-venue-block">
+                            <div class="pub-venue-name">India AI<br>Summit 2026</div>
+                            <div class="pub-venue-sub">Casebook on AI Education</div>
+                        </div>
+                        <div class="pub-case-number">Case Study · No. 17</div>
+                    </div>
                 </div>
             </div>
         </div>
