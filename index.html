@@ -1054,6 +1054,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#approach">Approach</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="teaching-assistant.html">Teaching Assistant</a></li>                
                 <li><a href="#cta">Contact</a></li>
             </ul>
         </div>
@@ -1239,8 +1240,11 @@
                         </div>
 
                         <div class="pub-cta-group">
-                            <a href="Indra_AI_-_AI_Powered_Teaching_Assistant.pdf" target="_blank" class="pub-btn pub-btn-primary">
+                            <a href="Indra_AI_-_AI_Powered_Teaching_Assistant.pdf" target="_blank" rel="noopener noreferrer" class="pub-btn pub-btn-primary">
                                 <i class="fas fa-file-pdf"></i> Read Case Study
+                            </a>
+                            <a href="teaching-assistant.html" class="pub-btn pub-btn-secondary">
+                                Try the Demo
                             </a>
                             <a href="#cta" class="pub-btn pub-btn-secondary">
                                 <i class="fas fa-envelope"></i> Get in Touch
@@ -1269,7 +1273,6 @@
                 Let's work together to ensure your AI initiatives are ethical, compliant, and aligned with your values. 
                 Contact us to discuss how we can support your organization's AI journey.
             </p>
-            <!-- <a href="mailto:shivam@indra-ai.org" class="cta-button">Get in Touch</a> -->
             <form id="my-form" action="https://formspree.io/f/mwvnegbl" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 600px; margin: 0 auto; background: var(--slate-dark); padding: 30px; border: 1px solid var(--gold);">
                 <div class="form-group">
                     <label style="color: var(--gold); display: block; margin-bottom: 5px;">Full Name</label>
@@ -1291,6 +1294,7 @@
                     <textarea name="message" rows="5" required style="width: 100%; padding: 12px; background: var(--black); border: 1px solid var(--slate); color: white;"></textarea>
                 </div>
                 <input type="hidden" name="_subject" value="New Contact from Indra AI Website">
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                 <button id="my-form-button" type="submit" class="cta-button">
                     Send Message
                 </button>
@@ -1302,28 +1306,25 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/company/indra-ai" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/indra-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <!-- <a href="https://facebook.com/indra-ai" target="_blank" aria-label="Facebook">
+            <!-- <a href="https://facebook.com/indra-ai" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://twitter.com/indra-ai" target="_blank" aria-label="Twitter">
+            <a href="https://twitter.com/indra-ai" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com/indra-ai" target="_blank" aria-label="Instagram">
+            <a href="https://instagram.com/indra-ai" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://youtube.com/@indra-ai" target="_blank" aria-label="YouTube">
+            <a href="https://youtube.com/@indra-ai" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i class="fab fa-youtube"></i>
             </a> -->
         </div>
         <p>&copy; 2026 Indra AI. All rights reserved.</p>
         <p style="margin-top: 1rem;">
             A non-profit organization dedicated to responsible artificial intelligence.
-        </p>
-        <!-- <p style="margin-top: 0.5rem;">
-            <a href="mailto:contact@indra-ai.org">contact@indra-ai.org</a>-->
         </p>
     </footer>
 
@@ -1403,7 +1404,7 @@
             
             // UI Feedback: Show sending state
             status.style.display = "block";
-            status.innerHTML = "Sending...";
+            status.textContent = "Sending...";
             status.style.color = "var(--gold)";
 
             fetch(event.target.action, {
@@ -1415,23 +1416,23 @@
             }).then(response => {
                 if (response.ok) {
                     // UI Feedback: Success
-                    status.innerHTML = "Success! We will contact you shortly.";
+                    status.textContent = "Success! We will contact you shortly.";
                     status.style.color = "#4BB543";
                     form.reset();
                 } else {
                     // UI Feedback: Server Error (e.g., Unverified Email)
                     response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {
-                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                            status.textContent = data["errors"].map(error => error["message"]).join(", ");
                         } else {
-                            status.innerHTML = "Submission failed. Please check your Form ID.";
+                            status.textContent = "Submission failed. Please check your Form ID.";
                         }
                     });
                     status.style.color = "#ff4444";
                 }
             }).catch(error => {
                 // UI Feedback: Network Error
-                status.innerHTML = "Connection error. Please check your internet.";
+                status.textContent = "Connection error. Please check your internet.";
                 status.style.color = "#ff4444";
             });
         }
